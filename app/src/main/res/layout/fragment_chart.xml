@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recentFragment_constraintLayout"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="@drawable/card_view_border"
+    android:padding="8dp"
+    tools:context=".ChartFragment">
+
+
+
+
+    <RadioGroup
+        android:id="@+id/rgActivityType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <RadioButton
+            android:id="@+id/rbRun"
+            android:layout_width="80dp"
+            android:gravity="center"
+            android:layout_height="30dp"
+            android:background="@drawable/radiobutton_selector"
+            android:button="@android:color/transparent"
+            android:checked="true"
+            android:text="Run"
+            android:textColor="@color/radio_flat_text_selector"
+            />
+
+        <RadioButton
+            android:id="@+id/rbRide"
+            android:layout_width="80dp"
+            android:gravity="center"
+            android:layout_height="30dp"
+            android:background="@drawable/radiobutton_selector"
+            android:textColor="@color/radio_flat_text_selector"
+            android:button="@android:color/transparent"
+            android:text="Ride" />
+
+        <RadioButton
+            android:id="@+id/rbWalk"
+            android:layout_width="80dp"
+            android:gravity="center"
+            android:layout_height="30dp"
+            android:background="@drawable/radiobutton_selector"
+            android:textColor="@color/radio_flat_text_selector"
+            android:button="@android:color/transparent"
+            android:text="Walk" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distance (km) - last 12 months"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgActivityType"
+        />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chart"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+      />
+
+    <TextView
+        android:id="@+id/txtActivities1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/activities"
+        app:layout_constraintTop_toBottomOf="@id/imgActivities2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDuration1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/duration"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtActivities1" />
+
+    <TextView
+        android:id="@+id/txtDistance1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="@string/distance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtActivities1" />
+
+    <TextView
+        android:id="@+id/txtPace1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="40dp"
+        android:text="Pace "
+        app:layout_constraintTop_toBottomOf="@id/imgPace2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/txtSpeed1"
+        />
+
+    <TextView
+        android:id="@+id/txtSpeed1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speed"
+
+        app:layout_constraintStart_toStartOf="@id/txtPace1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtPace1" />
+
+    <TextView
+        android:id="@+id/number_activities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtActivities1"
+        app:layout_constraintStart_toStartOf="@+id/txtActivities1"
+        tools:text="124" />
+
+    <TextView
+        android:id="@+id/number_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="204 h 23 min"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtDuration1"
+        app:layout_constraintTop_toTopOf="@+id/number_activities" />
+
+    <TextView
+        android:id="@+id/number_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtDistance1"
+        app:layout_constraintTop_toTopOf="@+id/number_activities"
+        tools:text="9999.9 km" />
+
+
+    <TextView
+        android:id="@+id/number_pace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="7.05 min/km"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtPace1"
+        app:layout_constraintBottom_toTopOf="@+id/txtPace1" />
+
+    <TextView
+        android:id="@+id/number_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintStart_toStartOf="@+id/txtSpeed1"
+        app:layout_constraintBottom_toTopOf="@+id/txtSpeed1"
+        tools:text="8.02 km/h" />
+
+
+    <ImageView
+        android:id="@+id/imgActivities2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/activities"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chart" />
+
+    <ImageView
+        android:id="@+id/imgDistance2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/distance"
+        app:layout_constraintStart_toStartOf="@id/txtDistance1"
+        app:layout_constraintTop_toTopOf="@+id/imgActivities2" />
+
+    <ImageView
+        android:id="@+id/imgDuration2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/duration"
+        app:layout_constraintStart_toStartOf="@id/txtDuration1"
+        app:layout_constraintTop_toTopOf="@+id/imgActivities2" />
+
+    <ImageView
+        android:id="@+id/imgPace2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/pace"
+        app:layout_constraintStart_toStartOf="@id/txtPace1"
+        app:layout_constraintTop_toBottomOf="@+id/txtActivities1" />
+
+    <ImageView
+        android:id="@+id/imgSpeed2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:src="@drawable/speed"
+        app:layout_constraintStart_toStartOf="@id/txtSpeed1"
+        app:layout_constraintTop_toTopOf="@+id/imgPace2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

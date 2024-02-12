@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recentFragment_constraintLayout"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="@drawable/card_view_border"
+    android:padding="8dp"
+    tools:context=".RecentActivitiesFragment">
+
+
+    <TextView
+        android:id="@+id/txtHDCLeaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="HDC LEADERBOARD"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:padding="5dp"
+        android:background="@drawable/button_border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtRecentActivities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="RECENT ACTIVITIES"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtHDCLeaderboard"
+        />
+
+
+    <TextView
+        android:id="@+id/txtShowMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="SHOW MORE"
+        android:textSize="12sp"
+        android:textColor="@color/purple_200"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:padding="5dp"
+        android:background="@drawable/button_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtRecentActivities" />
+
+
+
+    <ImageView
+        android:id="@+id/recentFragment_image1"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintStart_toStartOf="@id/txtRecentActivities"
+        app:layout_constraintTop_toBottomOf="@id/txtRecentActivities"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ride"
+        />
+    <TextView
+        android:id="@+id/recentFragment_distance1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/recentFragment_image1"
+        app:layout_constraintStart_toEndOf="@id/recentFragment_image1"
+        android:layout_marginLeft="16dp"
+        android:text="9.04 km"
+        />
+    <TextView
+        android:id="@+id/recentFragment_duration1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/recentFragment_distance1"
+        app:layout_constraintTop_toBottomOf="@id/recentFragment_distance1"
+        android:layout_marginTop="4dp"
+        android:text="01:07:46"
+        />
+
+    <TextView
+        android:id="@+id/recentFragment_pace1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6:35 min/km"
+        app:layout_constraintEnd_toEndOf="@+id/txtShowMore"
+        app:layout_constraintTop_toTopOf="@+id/recentFragment_distance1" />
+
+    <TextView
+        android:id="@+id/recentFragment_date1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yesterday"
+        app:layout_constraintBottom_toBottomOf="@id/recentFragment_duration1"
+        app:layout_constraintEnd_toEndOf="@id/txtShowMore" />
+
+
+
+
+
+    <ImageView
+        android:id="@+id/recentFragment_image2"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintStart_toStartOf="@id/txtRecentActivities"
+        app:layout_constraintTop_toBottomOf="@id/recentFragment_duration1"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/run"
+        />
+    <TextView
+        android:id="@+id/recentFragment_distance2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/recentFragment_image2"
+        app:layout_constraintStart_toEndOf="@id/recentFragment_image2"
+        android:layout_marginLeft="16dp"
+        android:text="14.20 km"
+        />
+    <TextView
+        android:id="@+id/recentFragment_duration2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/recentFragment_distance2"
+        app:layout_constraintTop_toBottomOf="@id/recentFragment_distance2"
+        android:layout_marginTop="4dp"
+        android:text="01:25:46"
+        />
+
+    <TextView
+        android:id="@+id/recentFragment_pace2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7:05 min/km"
+        app:layout_constraintEnd_toEndOf="@+id/txtShowMore"
+        app:layout_constraintTop_toTopOf="@+id/recentFragment_distance2" />
+
+    <TextView
+        android:id="@+id/recentFragment_date2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sun, 30/12/21"
+        app:layout_constraintBottom_toBottomOf="@id/recentFragment_duration2"
+        app:layout_constraintEnd_toEndOf="@id/txtShowMore" />
+
+
+    <TextView
+        android:id="@+id/txtAddActivityManually"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="ADD AN ACTIVITY MANUALLY"
+        android:textSize="12sp"
+        android:textColor="@color/purple_200"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:padding="5dp"
+        android:background="@drawable/button_border"
+        app:layout_constraintStart_toStartOf="@id/txtRecentActivities"
+        app:layout_constraintTop_toBottomOf="@id/recentFragment_duration2" />
+
+    <TextView
+        android:id="@+id/txtLeaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="LEADERBOARD"
+        android:textSize="12sp"
+        android:textColor="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:padding="5dp"
+        android:background="@drawable/button_border"
+        app:layout_constraintTop_toBottomOf="@id/txtAddActivityManually" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

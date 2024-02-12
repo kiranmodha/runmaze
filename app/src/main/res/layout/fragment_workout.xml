@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_view_border"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <TextView
+            android:id="@+id/txtHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/workout"
+            android:textColor="@color/purple_500"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="32dp"
+            android:text="Date :"
+            android:textColor="@color/purple_700"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeading" />
+
+        <EditText
+            android:id="@+id/editDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="6"
+            android:hint="dd/mm/yyyy"
+            android:inputType="date"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/txtDate"
+            app:layout_constraintStart_toEndOf="@+id/txtDistance"
+            app:layout_constraintTop_toTopOf="@+id/txtDate" />
+
+        <Button
+            android:id="@+id/btnDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="..."
+            app:layout_constraintStart_toEndOf="@+id/editDate"
+            app:layout_constraintTop_toTopOf="@+id/editDate" />
+
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Time :"
+            android:textColor="@color/purple_700"
+            app:layout_constraintStart_toStartOf="@+id/txtDate"
+            app:layout_constraintTop_toBottomOf="@+id/editDate" />
+
+        <EditText
+            android:id="@+id/editTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="6"
+            android:hint="HH:mm"
+            android:inputType="time"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/txtTime"
+            app:layout_constraintStart_toStartOf="@+id/editDate"
+            app:layout_constraintTop_toTopOf="@+id/txtTime" />
+
+        <Button
+            android:id="@+id/btnTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            app:layout_constraintEnd_toEndOf="@+id/btnDate"
+            app:layout_constraintTop_toTopOf="@+id/editTime" />
+
+        <TextView
+            android:id="@+id/txtActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/activity"
+            android:textColor="@color/purple_700"
+            app:layout_constraintStart_toStartOf="@+id/txtTime"
+            app:layout_constraintTop_toBottomOf="@+id/editTime" />
+
+        <Spinner
+            android:id="@+id/spinActivities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/activity_type_arrays"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtActivity"
+            app:layout_constraintStart_toStartOf="@+id/editTime"
+            app:layout_constraintTop_toTopOf="@+id/txtActivity" />
+
+        <ImageView
+            android:id="@+id/imageActivity"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/txtActivity"
+
+            app:layout_constraintStart_toStartOf="@+id/btnTime"
+            app:layout_constraintTop_toTopOf="@+id/txtActivity"
+            app:srcCompat="@drawable/run" />
+
+        <TextView
+            android:id="@+id/txtDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Distance :"
+            android:textColor="@color/purple_700"
+            app:layout_constraintStart_toStartOf="@+id/txtActivity"
+            app:layout_constraintTop_toBottomOf="@+id/spinActivities" />
+
+        <EditText
+            android:id="@+id/editDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/txtDistance"
+            app:layout_constraintStart_toStartOf="@+id/spinActivities"
+            app:layout_constraintTop_toTopOf="@+id/txtDistance" />
+
+
+        <TextView
+            android:id="@+id/txtDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Duration :"
+            android:textColor="@color/purple_700"
+            app:layout_constraintStart_toStartOf="@+id/txtDistance"
+            app:layout_constraintTop_toBottomOf="@+id/editDistance" />
+
+        <EditText
+            android:id="@+id/editHH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="2"
+            android:hint="hh"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/txtDuration"
+            app:layout_constraintStart_toStartOf="@+id/editDistance"
+            app:layout_constraintTop_toTopOf="@+id/txtDuration" />
+
+        <EditText
+            android:id="@+id/editMM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="2"
+            android:hint="mm"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/editSS"
+            app:layout_constraintStart_toEndOf="@+id/editHH"
+            app:layout_constraintTop_toTopOf="@+id/editHH" />
+
+        <EditText
+            android:id="@+id/editSS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="2"
+            android:hint="ss"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/editDistance"
+            app:layout_constraintTop_toTopOf="@+id/editMM" />
+
+        <TextView
+            android:id="@+id/txtLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+
+            android:text="Link :"
+            android:textColor="@color/purple_700"
+            app:layout_constraintStart_toStartOf="@+id/txtDuration"
+            app:layout_constraintTop_toBottomOf="@+id/editHH" />
+
+        <EditText
+            android:id="@+id/editLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/txtLink"
+            app:layout_constraintStart_toStartOf="@+id/editHH"
+            app:layout_constraintTop_toTopOf="@+id/txtLink" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editLink" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

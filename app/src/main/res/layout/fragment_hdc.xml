@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recentFragment_constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/titleLeaderboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HDC LEADERBOARD"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <RadioGroup
+            android:id="@+id/rgPeriodHDC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleLeaderboard">
+
+            <RadioButton
+                android:id="@+id/rbtnHDC"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/radiobutton_selector"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:gravity="center"
+                android:text="HDC"
+                android:textColor="@color/radio_flat_text_selector" />
+
+            <RadioButton
+                android:id="@+id/rbtnHDCDay"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/radiobutton_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="Day"
+                android:textColor="@color/radio_flat_text_selector" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/txtSerialNo1"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Rank"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rgPeriodHDC" />
+
+
+        <TextView
+            android:id="@+id/txtName1"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Name"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/txtSerialNo1"
+            app:layout_constraintTop_toTopOf="@id/txtSerialNo1" />
+
+
+        <TextView
+            android:id="@+id/txtActivityCount1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="Days - Activities"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/txtDistance1"
+            app:layout_constraintTop_toTopOf="@id/txtSerialNo1" />
+
+        <TextView
+            android:id="@+id/txtDistance1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Distance"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtSerialNo1" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_leaderboardHDC_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@id/txtSerialNo1"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <TextView
+            android:id="@+id/txtEmptyView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No activities found"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/list_leaderboardHDC_recyclerview" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

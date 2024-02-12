@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_view_border"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/list_gd_serial_no"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="01" />
+
+
+        <TextView
+            android:id="@+id/list_gd_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+
+            app:layout_constraintStart_toEndOf="@id/list_gd_serial_no"
+            app:layout_constraintTop_toTopOf="@id/list_gd_serial_no"
+            tools:text="Kiran Modha" />
+
+        <ImageView
+            android:id="@+id/imageActivity"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toStartOf="@id/list_gd_activity_count"
+            app:layout_constraintTop_toTopOf="@id/list_gd_serial_no"
+            app:srcCompat="@drawable/run" />
+
+        <TextView
+            android:id="@+id/list_gd_activity_count"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@id/list_gd_distance"
+            app:layout_constraintTop_toTopOf="@id/list_gd_serial_no"
+            tools:text="01" />
+
+        <TextView
+            android:id="@+id/list_gd_distance"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/list_gd_serial_no"
+            tools:text="12.1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

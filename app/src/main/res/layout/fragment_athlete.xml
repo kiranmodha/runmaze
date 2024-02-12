@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AthleteFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_view_border"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/data_txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Email :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/data_edtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="9"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toBottomOf="@+id/data_txtEmail"
+            app:layout_constraintStart_toEndOf="@+id/data_txtPassword"
+            app:layout_constraintTop_toTopOf="@+id/data_txtEmail" />
+
+
+        <TextView
+            android:id="@+id/data_txtPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Password :"
+            app:layout_constraintStart_toStartOf="@+id/data_txtEmail"
+            app:layout_constraintTop_toBottomOf="@+id/data_edtEmail" />
+
+        <EditText
+            android:id="@+id/data_edtPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="@+id/data_txtPassword"
+            app:layout_constraintStart_toStartOf="@+id/data_edtEmail"
+            app:layout_constraintTop_toTopOf="@+id/data_txtPassword" />
+
+
+        <TextView
+            android:id="@+id/data_txtReenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Re-Enter :"
+            app:layout_constraintStart_toStartOf="@+id/data_txtEmail"
+            app:layout_constraintTop_toBottomOf="@+id/data_edtPassword" />
+
+        <EditText
+            android:id="@+id/data_edtReenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="@+id/data_txtReenter"
+            app:layout_constraintStart_toStartOf="@+id/data_edtEmail"
+            app:layout_constraintTop_toTopOf="@+id/data_txtReenter" />
+
+
+        <TextView
+            android:id="@+id/data_txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Name :"
+            app:layout_constraintStart_toStartOf="@+id/data_txtEmail"
+            app:layout_constraintTop_toBottomOf="@+id/data_edtReenter" />
+
+        <EditText
+            android:id="@+id/data_edtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/data_txtName"
+            app:layout_constraintStart_toStartOf="@+id/data_edtEmail"
+            app:layout_constraintTop_toTopOf="@+id/data_txtName" />
+
+
+        <TextView
+            android:id="@+id/data_txtGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Gender :"
+            app:layout_constraintStart_toStartOf="@+id/data_txtEmail"
+            app:layout_constraintTop_toBottomOf="@+id/data_edtName" />
+
+<!--        <EditText-->
+<!--            android:id="@+id/data_edtGender"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="12"-->
+<!--            android:inputType="text"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/data_txtGender"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/data_edtEmail"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/data_txtGender" />-->
+
+        <Spinner
+            android:id="@+id/data_spnGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/gender_array"
+            app:layout_constraintBottom_toBottomOf="@+id/data_txtGender"
+            app:layout_constraintTop_toTopOf="@+id/data_txtGender"
+            app:layout_constraintStart_toStartOf="@+id/data_edtEmail" />
+
+
+
+        <TextView
+            android:id="@+id/data_txtBirthdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Birth date :"
+            app:layout_constraintStart_toStartOf="@+id/data_txtEmail"
+            app:layout_constraintTop_toBottomOf="@+id/data_spnGender" />
+
+        <EditText
+            android:id="@+id/data_edtBirthdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="date"
+            app:layout_constraintBottom_toBottomOf="@+id/data_txtBirthdate"
+            app:layout_constraintStart_toStartOf="@+id/data_edtEmail"
+            app:layout_constraintTop_toTopOf="@+id/data_txtBirthdate" />
+
+        <TextView
+            android:id="@+id/data_txtCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="City :"
+            app:layout_constraintStart_toStartOf="@+id/data_txtEmail"
+            app:layout_constraintTop_toBottomOf="@+id/data_edtBirthdate" />
+
+
+
+
+<!--        <EditText-->
+<!--            android:id="@+id/data_edtCity"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="12"-->
+<!--            android:inputType="text"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/data_txtCity"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/data_edtEmail"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/data_txtCity" />-->
+
+        <Spinner
+            android:id="@+id/data_spnCity"
+            android:layout_width="210dp"
+            android:dropDownWidth="210dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/data_txtCity"
+            app:layout_constraintTop_toTopOf="@+id/data_txtCity"
+            app:layout_constraintStart_toStartOf="@+id/data_edtEmail" />
+
+        <TextView
+            android:id="@+id/data_txtClub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Club :"
+            app:layout_constraintStart_toStartOf="@+id/data_txtEmail"
+            app:layout_constraintTop_toBottomOf="@+id/data_spnCity" />
+
+<!--        <EditText-->
+<!--            android:id="@+id/data_edtClub"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="12"-->
+<!--            android:inputType="text"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/data_txtClub"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/data_edtEmail"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/data_txtClub" />-->
+
+        <Spinner
+            android:id="@+id/data_spnClub"
+            android:layout_width="210dp"
+            android:dropDownWidth="210dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/data_txtClub"
+            app:layout_constraintTop_toTopOf="@+id/data_txtClub"
+            app:layout_constraintStart_toStartOf="@+id/data_edtEmail" />
+
+        <TextView
+            android:id="@+id/data_txtCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Company :"
+            app:layout_constraintStart_toStartOf="@+id/data_txtEmail"
+            app:layout_constraintTop_toBottomOf="@+id/data_spnClub" />
+
+<!--        <EditText-->
+<!--            android:id="@+id/data_edtCompany"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="12"-->
+<!--            android:inputType="text"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/data_txtCompany"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/data_edtEmail"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/data_txtCompany" />-->
+
+        <Spinner
+            android:id="@+id/data_spnCompany"
+            android:layout_width="210dp"
+            android:dropDownWidth="210dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/data_txtCompany"
+            app:layout_constraintTop_toTopOf="@+id/data_txtCompany"
+            app:layout_constraintStart_toStartOf="@+id/data_edtEmail" />
+
+        <Button
+            android:id="@+id/data_btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/data_spnCompany" />
+
+        <Button
+            android:id="@+id/data_btnDate"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="..."
+            app:layout_constraintBottom_toBottomOf="@+id/data_edtBirthdate"
+            app:layout_constraintStart_toEndOf="@+id/data_edtBirthdate"
+            app:layout_constraintTop_toTopOf="@+id/data_edtBirthdate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

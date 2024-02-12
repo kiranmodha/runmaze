@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment"
+    >
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.runmaze.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_workoutFragment"
+            app:destination="@id/workoutFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_stravaFragment"
+            app:destination="@id/stravaFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_athleteFragment"
+            app:destination="@id/athleteFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_leaderboardFragment"
+            app:destination="@id/leaderboardFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_moreDataFragment"
+            app:destination="@id/moreDataFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_hdcFragment"
+            app:destination="@id/hdcFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workoutFragment"
+        android:name="com.example.runmaze.WorkoutFragment"
+        android:label="workoutFragment" />
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.runmaze.WorkoutListFragment"
+        android:label="listFragment" >
+        <action
+            android:id="@+id/action_listFragment_to_workoutFragment"
+            app:destination="@id/workoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stravaFragment"
+        android:name="com.example.runmaze.StravaFragment"
+        android:label="StravaFragment" />
+    <fragment
+        android:id="@+id/athleteFragment"
+        android:name="com.example.runmaze.AthleteFragment"
+        android:label="fragment_data"
+        tools:layout="@layout/fragment_athlete" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.runmaze.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/leaderboardFragment"
+        android:name="com.example.runmaze.LeaderboardFragment"
+        android:label="LeaderboardFragment" />
+    <fragment
+        android:id="@+id/moreDataFragment"
+        android:name="com.example.runmaze.MoreDataFragment"
+        android:label="MoreDataFragment" />
+    <fragment
+        android:id="@+id/hdcFragment"
+        android:name="com.example.runmaze.HdcFragment"
+        android:label="HdcFragment" />
+</navigation>

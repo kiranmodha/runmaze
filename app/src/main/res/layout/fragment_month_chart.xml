@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recentFragment_constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_view_border"
+    android:padding="8dp"
+    tools:context=".MonthChartFragment">
+
+    <TextView
+        android:id="@+id/txtShowMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_border"
+        android:padding="5dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="SHOW MORE"
+        android:textColor="@color/purple_200"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgActivityType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtShowMore">
+
+        <RadioButton
+            android:id="@+id/rbRun"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:background="@drawable/radiobutton_selector"
+            android:button="@android:color/transparent"
+            android:checked="true"
+            android:gravity="center"
+            android:text="Run"
+            android:textColor="@color/radio_flat_text_selector" />
+
+        <RadioButton
+            android:id="@+id/rbRide"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:background="@drawable/radiobutton_selector"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="Ride"
+            android:textColor="@color/radio_flat_text_selector" />
+
+        <RadioButton
+            android:id="@+id/rbWalk"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:background="@drawable/radiobutton_selector"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="Walk"
+            android:textColor="@color/radio_flat_text_selector" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Distance (km) in current month"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgActivityType" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@id/imgPrevMonth" />
+
+    <ImageView
+        android:id="@+id/imgActivities"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/activities"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chart" />
+
+    <TextView
+        android:id="@+id/monthChart_txtActivities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/activities"
+        app:layout_constraintBottom_toBottomOf="@id/imgActivities"
+        app:layout_constraintStart_toEndOf="@+id/imgActivities"
+        app:layout_constraintTop_toTopOf="@id/imgActivities" />
+
+
+    <TextView
+        android:id="@+id/monthChart_Activities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/monthChart_txtActivities"
+        app:layout_constraintTop_toTopOf="@id/monthChart_txtActivities"
+        tools:text="124" />
+
+
+    <ImageView
+        android:id="@+id/imgDistance"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/distance"
+        app:layout_constraintStart_toStartOf="@id/imgActivities"
+        app:layout_constraintTop_toBottomOf="@+id/imgActivities" />
+
+
+    <TextView
+        android:id="@+id/monthChart_txtDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/distance"
+        app:layout_constraintBottom_toBottomOf="@id/imgDistance"
+        app:layout_constraintStart_toStartOf="@+id/monthChart_txtActivities"
+        app:layout_constraintTop_toTopOf="@id/imgDistance" />
+
+
+    <TextView
+        android:id="@+id/monthChart_Distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/monthChart_Activities"
+        app:layout_constraintTop_toTopOf="@id/monthChart_txtDistance"
+        tools:text="9999.9 km" />
+
+
+    <ImageView
+        android:id="@+id/imgDuration"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/duration"
+        app:layout_constraintStart_toStartOf="@id/imgActivities"
+        app:layout_constraintTop_toBottomOf="@+id/imgDistance" />
+
+
+    <TextView
+        android:id="@+id/monthChart_txtDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/duration"
+        app:layout_constraintBottom_toBottomOf="@id/imgDuration"
+        app:layout_constraintStart_toStartOf="@+id/monthChart_txtActivities"
+        app:layout_constraintTop_toTopOf="@id/imgDuration" />
+
+    <TextView
+        android:id="@+id/monthChart_Duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/monthChart_Activities"
+        app:layout_constraintTop_toTopOf="@id/monthChart_txtDuration"
+        tools:text="204 h 23 min" />
+
+    <ImageView
+        android:id="@+id/imgPace"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/pace"
+        app:layout_constraintStart_toStartOf="@id/imgActivities"
+        app:layout_constraintTop_toBottomOf="@+id/imgDuration" />
+
+    <TextView
+        android:id="@+id/monthChart_txtPace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pace"
+        app:layout_constraintBottom_toBottomOf="@id/imgPace"
+        app:layout_constraintStart_toStartOf="@+id/monthChart_txtActivities"
+        app:layout_constraintTop_toTopOf="@id/imgPace" />
+
+    <TextView
+        android:id="@+id/monthChart_Pace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/monthChart_Activities"
+        app:layout_constraintTop_toTopOf="@id/monthChart_txtPace"
+        tools:text="06:55 min/km" />
+
+    <ImageView
+        android:id="@+id/imgSpeed"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/speed"
+        app:layout_constraintStart_toStartOf="@id/imgActivities"
+        app:layout_constraintTop_toBottomOf="@+id/imgPace" />
+
+    <TextView
+        android:id="@+id/monthChart_txtSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speed"
+        app:layout_constraintBottom_toBottomOf="@id/imgSpeed"
+        app:layout_constraintStart_toStartOf="@+id/monthChart_txtActivities"
+        app:layout_constraintTop_toTopOf="@id/imgSpeed" />
+
+
+    <TextView
+        android:id="@+id/monthChart_Speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/monthChart_Activities"
+        app:layout_constraintTop_toTopOf="@id/monthChart_txtSpeed"
+        tools:text="9.2 km/h" />
+
+    <ImageView
+        android:id="@+id/imgPrevMonth"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:text="Previous"
+        android:src="@drawable/left_arrow"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/chart"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle" />
+
+    <ImageView
+        android:id="@+id/imgNextMonth"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/right_arrow"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="@id/chart"
+        app:layout_constraintTop_toTopOf="@id/imgPrevMonth" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

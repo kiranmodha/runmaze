@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    >
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/card_view_border"-->
+<!--        >-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_view_border"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/list_activity_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Running" />
+
+
+        <TextView
+            android:id="@+id/list_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="10.1 km" />
+
+
+        <TextView
+            android:id="@+id/list_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintStart_toStartOf="@id/list_distance"
+            app:layout_constraintTop_toBottomOf="@id/list_distance"
+            tools:text="01:12:20" />
+
+        <TextView
+            android:id="@+id/list_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/list_activity_type"
+            app:layout_constraintTop_toTopOf="@+id/list_duration"
+            tools:text="Sat, 1 Jan 2022" />
+
+        <TextView
+            android:id="@+id/list_pace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageActivity"
+            app:layout_constraintTop_toTopOf="@+id/list_activity_type"
+            tools:text="7:15 min/km" />
+
+        <ImageView
+            android:id="@+id/imageActivity"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/list_activity_type"
+            app:layout_constraintTop_toTopOf="@+id/list_activity_type"
+            app:srcCompat="@drawable/run" />
+
+
+        <ImageView
+            android:id="@+id/list_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/list_date"
+            app:layout_constraintTop_toTopOf="@+id/list_edit"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
+
+        <ImageView
+            android:id="@+id/list_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/list_duration"
+            app:layout_constraintTop_toBottomOf="@+id/list_duration"
+            app:srcCompat="@android:drawable/ic_menu_edit" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--    </androidx.cardview.widget.CardView>-->
+
+</RelativeLayout>
